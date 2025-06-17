@@ -1,0 +1,106 @@
+
+import { Satellite, Star } from "lucide-react";
+
+const experiences = [
+  {
+    title: "Undergraduate Research Assistant",
+    company: "University of Waterloo",
+    period: "Sep 2024 - Present",
+    description: "Advancing edge computing research, developing innovative solutions for distributed systems and optimization algorithms.",
+    achievements: [
+      "Conducting cutting-edge research in edge computing optimization",
+      "Developing algorithms for distributed system efficiency",
+      "Contributing to academic publications and research papers"
+    ]
+  },
+  {
+    title: "Software Developer Intern",
+    company: "Miovision Technologies",
+    period: "Jan 2024 - Apr 2024",
+    description: "Full-stack development for traffic management systems, working with modern web technologies and data processing.",
+    achievements: [
+      "Developed full-stack applications for traffic data analysis",
+      "Implemented real-time data processing solutions",
+      "Collaborated with cross-functional teams on product development"
+    ]
+  },
+  {
+    title: "Firmware Developer Intern",
+    company: "Miovision Technologies", 
+    period: "May 2023 - Aug 2023",
+    description: "Low-level programming and firmware development for traffic monitoring hardware systems.",
+    achievements: [
+      "Developed firmware for embedded traffic monitoring systems",
+      "Optimized system performance and reliability",
+      "Worked with hardware-software integration projects"
+    ]
+  }
+];
+
+const Experience = () => {
+  return (
+    <section id="experience" className="py-20 relative">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center mb-4">
+            <Satellite className="h-6 w-6 text-blue-400 mr-2" />
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-white bg-clip-text text-transparent">
+              Mission History
+            </h2>
+            <Satellite className="h-6 w-6 text-blue-400 ml-2" />
+          </div>
+        </div>
+        
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-8">
+            {experiences.map((exp, index) => (
+              <div
+                key={index}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-500 hover:scale-105"
+              >
+                <div className="flex items-start mb-6">
+                  <Star className="h-6 w-6 text-blue-400 mr-4 mt-1 flex-shrink-0" />
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                      <div>
+                        <h3 className="text-2xl font-semibold text-white mb-2">
+                          {exp.title}
+                        </h3>
+                        <h4 className="text-xl text-blue-300 mb-2">
+                          {exp.company}
+                        </h4>
+                      </div>
+                      <span className="text-blue-200 bg-blue-900/30 px-4 py-2 rounded-full text-sm font-medium">
+                        {exp.period}
+                      </span>
+                    </div>
+                    
+                    <p className="text-blue-100 mb-6 leading-relaxed">
+                      {exp.description}
+                    </p>
+                    
+                    <div>
+                      <h5 className="text-lg font-semibold text-blue-300 mb-3">
+                        Key Achievements
+                      </h5>
+                      <ul className="space-y-2">
+                        {exp.achievements.map((achievement, achIndex) => (
+                          <li key={achIndex} className="flex items-start text-blue-100">
+                            <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                            {achievement}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Experience;
