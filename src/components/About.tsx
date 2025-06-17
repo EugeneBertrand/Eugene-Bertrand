@@ -1,9 +1,6 @@
-
 import { Rocket, Star } from "lucide-react";
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 relative">
+  return <section id="about" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">
@@ -20,18 +17,12 @@ const About = () => {
             <div className="flex items-start mb-6">
               <Rocket className="h-8 w-8 text-blue-400 mr-4 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="text-2xl font-semibold text-white mb-4">
-                  Computer Engineering Navigator
-                </h3>
-                <p className="text-blue-100 text-lg leading-relaxed mb-6">
-                  As a dedicated Computer Engineering student at the University of Waterloo, I'm charting a course through 
-                  the vast expanse of technology. My journey spans edge computing research, AI/ML development, and full-stack 
-                  engineering, always pushing the boundaries of what's possible.
-                </p>
+                <h3 className="text-2xl font-semibold text-white mb-4">Bio</h3>
+                <p className="text-blue-100 text-lg leading-relaxed mb-6">As a dedicated Data Science student at UC San Diego, I'm charting a course through the vast expanse of technology. My journey spans edge computing research, AI/ML development, and full-stack engineering, always pushing the boundaries of what's possible.</p>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
-                    <h4 className="text-xl font-semibold text-blue-300">Current Trajectory</h4>
+                    <h4 className="text-xl font-semibold text-blue-300">Summary</h4>
                     <ul className="space-y-2 text-blue-100">
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
@@ -49,7 +40,7 @@ const About = () => {
                   </div>
                   
                   <div className="space-y-4">
-                    <h4 className="text-xl font-semibold text-blue-300">Mission Specialties</h4>
+                    <h4 className="text-xl font-semibold text-blue-300">Skills</h4>
                     <ul className="space-y-2 text-blue-100">
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
@@ -71,8 +62,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
