@@ -5,9 +5,7 @@ const About = () => {
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">
             <Star className="h-6 w-6 text-blue-400 mr-2" />
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-white bg-clip-text text-transparent">
-              Mission Profile
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-white bg-clip-text text-transparent">Profile</h2>
             <Star className="h-6 w-6 text-blue-400 ml-2" />
           </div>
         </div>
