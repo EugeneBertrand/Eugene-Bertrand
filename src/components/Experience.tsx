@@ -1,23 +1,18 @@
 import { Satellite, Star } from "lucide-react";
+
 const experiences = [{
-  title: "Undergraduate Research Assistant",
-  company: "University of Waterloo",
-  period: "Sep 2024 - Present",
-  description: "Advancing edge computing research, developing innovative solutions for distributed systems and optimization algorithms.",
-  achievements: ["Conducting cutting-edge research in edge computing optimization", "Developing algorithms for distributed system efficiency", "Contributing to academic publications and research papers"]
-}, {
-  title: "Software Developer Intern",
-  company: "Miovision Technologies",
-  period: "Jan 2024 - Apr 2024",
-  description: "Full-stack development for traffic management systems, working with modern web technologies and data processing.",
-  achievements: ["Developed full-stack applications for traffic data analysis", "Implemented real-time data processing solutions", "Collaborated with cross-functional teams on product development"]
-}, {
-  title: "Firmware Developer Intern",
-  company: "Miovision Technologies",
-  period: "May 2023 - Aug 2023",
-  description: "Low-level programming and firmware development for traffic monitoring hardware systems.",
-  achievements: ["Developed firmware for embedded traffic monitoring systems", "Optimized system performance and reliability", "Worked with hardware-software integration projects"]
+  title: "Edge Computing Researcher",
+  company: "Baskin Engineering at UC Santa Cruz",
+  period: "Apr 2025 - Present",
+  description: "Led by Professor Abel Souza. Conducting research on intelligent, power-aware user-space scheduling for edge servers, focused on improving energy efficiency without compromising performance.",
+  achievements: [
+    "Developed tools utilizing Python to detect real-time CPU utilization shifts by analyzing workload patterns and slope-based behavior changes",
+    "Simulated diverse computational workloads—including variable-scale matrix multiplication—using Python's Multiprocessing framework",
+    "Forecasted CPU demand and communicated results through a shared interface to enable dynamic, load-aware scheduling decisions",
+    "Achieved up to 2.3× speedup in workload throughput and 18% reduction in power usage under high-utilization scenarios through adaptive scheduling techniques"
+  ]
 }];
+
 const Experience = () => {
   return <section id="experience" className="py-20 relative">
       <div className="container mx-auto px-4">
@@ -72,4 +67,5 @@ const Experience = () => {
       </div>
     </section>;
 };
+
 export default Experience;
