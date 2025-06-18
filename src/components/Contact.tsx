@@ -1,4 +1,3 @@
-
 import { Rocket, Star, Download, FileText } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -122,13 +121,14 @@ const Contact = () => {
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-white bg-clip-text text-transparent">Resume</h3>
                 </div>
                 <p className="text-cyan-200 mb-4">Download my resume to learn more about my experience and skills</p>
-                <Button 
-                  onClick={handleDownloadResume}
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-500 text-black rounded-full hover:from-cyan-500 hover:to-cyan-400 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 flex items-center mx-auto font-semibold"
-                >
-                  <Download className="h-5 w-5 mr-2" />
-                  Download Resume
-                </Button>
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <Button 
+                    className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-500 text-black rounded-full hover:from-cyan-500 hover:to-cyan-400 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 flex items-center mx-auto font-semibold"
+                  >
+                    <Download className="h-5 w-5 mr-2" />
+                    Download Resume
+                  </Button>
+                </a>
               </div>
             </div>
             
