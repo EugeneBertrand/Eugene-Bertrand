@@ -18,11 +18,7 @@ const Index = () => {
   }, []);
 
   const backgroundStyle = {
-    background: `radial-gradient(circle at ${50 + scrollY * 0.01}% ${30 + scrollY * 0.02}%, 
-      rgba(6, 182, 212, 0.1) 0%, 
-      rgba(59, 130, 246, 0.05) 25%, 
-      transparent 50%), 
-      linear-gradient(${135 + scrollY * 0.1}deg, 
+    background: `linear-gradient(180deg, 
       rgb(2, 6, 23) 0%, 
       rgb(15, 23, 42) 25%, 
       rgb(30, 41, 59) 50%, 
@@ -30,20 +26,78 @@ const Index = () => {
       rgb(2, 6, 23) 100%)`
   };
 
+  // Generate star positions and movement
+  const generateStars = () => {
+    const stars = [];
+    for (let i = 0; i < 100; i++) {
+      const size = Math.random() * 3 + 1;
+      const initialX = Math.random() * 100;
+      const initialY = Math.random() * 100;
+      const speed = Math.random() * 0.5 + 0.1;
+      
+      // Calculate new position based on scroll
+      const newX = (initialX + scrollY * speed * 0.02) % 120;
+      const newY = (initialY + scrollY * speed * 0.01) % 120;
+      
+      stars.push(
+        <div
+          key={i}
+          className="absolute bg-white rounded-full animate-pulse"
+          style={{
+            width: `${size}px`,
+            height: `${size}px`,
+            left: `${newX}%`,
+            top: `${newY}%`,
+            animationDelay: `${Math.random() * 2}s`,
+            opacity: Math.random() * 0.8 + 0.2
+          }}
+        />
+      );
+    }
+    return stars;
+  };
+
   return (
     <div 
       className="min-h-screen text-white relative overflow-hidden transition-all duration-300"
       style={backgroundStyle}
     >
-      {/* Space background effects */}
+      {/* Moving starfield */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-1 h-1 bg-blue-300 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute top-60 left-1/4 w-1.5 h-1.5 bg-white rounded-full animate-pulse delay-500"></div>
-        <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-blue-200 rounded-full animate-pulse delay-1500"></div>
-        <div className="absolute bottom-60 left-1/2 w-2 h-2 bg-white rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute top-1/3 right-10 w-1 h-1 bg-blue-300 rounded-full animate-pulse delay-700"></div>
-        <div className="absolute bottom-20 left-20 w-1.5 h-1.5 bg-white rounded-full animate-pulse delay-300"></div>
+        {generateStars()}
+        
+        {/* Some larger moving stars */}
+        <div 
+          className="absolute w-2 h-2 bg-blue-300 rounded-full animate-pulse"
+          style={{
+            left: `${(20 + scrollY * 0.03) % 100}%`,
+            top: `${(15 + scrollY * 0.01) % 100}%`
+          }}
+        />
+        <div 
+          className="absolute w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"
+          style={{
+            left: `${(80 - scrollY * 0.02) % 100}%`,
+            top: `${(30 + scrollY * 0.015) % 100}%`,
+            animationDelay: '1s'
+          }}
+        />
+        <div 
+          className="absolute w-2.5 h-2.5 bg-white rounded-full animate-pulse"
+          style={{
+            left: `${(60 + scrollY * 0.025) % 100}%`,
+            top: `${(70 - scrollY * 0.02) % 100}%`,
+            animationDelay: '0.5s'
+          }}
+        />
+        <div 
+          className="absolute w-1 h-1 bg-blue-200 rounded-full animate-pulse"
+          style={{
+            left: `${(40 - scrollY * 0.015) % 100}%`,
+            top: `${(85 + scrollY * 0.02) % 100}%`,
+            animationDelay: '1.5s'
+          }}
+        />
       </div>
       
       <Header />
