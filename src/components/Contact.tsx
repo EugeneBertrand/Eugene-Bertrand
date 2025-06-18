@@ -55,7 +55,7 @@ const Contact = () => {
                 
                 <div>
                   <label htmlFor="email" className="block text-blue-300 font-medium mb-2">Email</label>
-                  <Input id="email" name="email" type="email" required value={formData.email} onChange={handleChange} className="bg-slate-700/50 border-blue-500/30 text-white placeholder-blue-300/50 focus:border-blue-400 focus:ring-blue-400/20" placeholder="your.email@galaxy.com" />
+                  <Input id="email" name="email" type="email" required value={formData.email} onChange={handleChange} className="bg-slate-700/50 border-blue-500/30 text-white placeholder-blue-300/50 focus:border-blue-400 focus:ring-blue-400/20" placeholder="Your Email" />
                 </div>
               </div>
               
