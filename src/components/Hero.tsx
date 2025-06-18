@@ -18,11 +18,11 @@ const Hero = () => {
           <Star className="h-8 w-8 text-white animate-pulse" />
         </div>
         
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-white to-cyan-300 bg-clip-text text-transparent font-orbitron tracking-wider">
+        <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-white to-cyan-300 bg-clip-text text-transparent tracking-wider">
           EUGENE BERTRAND
         </h1>
         
-        <h2 className="text-2xl md:text-3xl text-cyan-200 mb-8 font-medium font-orbitron tracking-widest">
+        <h2 className="text-2xl md:text-3xl text-cyan-200 mb-8 font-medium tracking-widest">
           DATA SCIENCE @ UC SAN DIEGO
         </h2>
         
@@ -33,13 +33,13 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-cyan-500 text-black rounded-full hover:from-cyan-500 hover:to-cyan-400 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 font-orbitron font-bold tracking-wide"
+            className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-cyan-500 text-black rounded-full hover:from-cyan-500 hover:to-cyan-400 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 font-bold tracking-wide"
           >
             EXPLORE
           </button>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300 font-orbitron font-bold tracking-wide"
+            className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300 font-bold tracking-wide"
           >
             CONNECT
           </button>
