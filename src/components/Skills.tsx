@@ -3,7 +3,7 @@ import { Satellite } from "lucide-react";
 const skillCategories = [
   {
     title: "Programming Languages",
-    skills: ["Python", "C/C++", "JavaScript/TypeScript", "Go", "Java", "SQL", "Rust", "Assembly"],
+    skills: ["Python", "C/C++", "JavaScript/TypeScript", "Go", "Java", "SQL", "Rust","R", "Assembly"],
     icon: "💻"
   },
   {
