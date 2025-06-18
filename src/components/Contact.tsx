@@ -67,7 +67,7 @@ const Contact = () => {
               <div className="text-center">
                 <Button type="submit" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full hover:from-blue-500 hover:to-blue-400 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 hover:scale-105 flex items-center mx-auto">
                   <Star className="h-5 w-5 mr-2" />
-                  Connect
+                  Connect!
                   <Star className="h-5 w-5 ml-2" />
                 </Button>
               </div>
@@ -76,13 +76,13 @@ const Contact = () => {
             <div className="mt-8 pt-8 border-t border-blue-500/20 text-center">
               <p className="text-blue-200 mb-4">Socials</p>
               <div className="flex justify-center space-x-6 text-blue-300">
-                <a href="mailto:mahir.patel@example.com" className="hover:text-blue-400 transition-colors">
+                <a href="eugenebertrand65@gmail.com" className="hover:text-blue-400 transition-colors">
                   📧 Email
                 </a>
-                <a href="https://linkedin.com/in/mahirpatel" className="hover:text-blue-400 transition-colors">
+                <a href="https://www.linkedin.com/in/eugene-bertrand-50766722b/" className="hover:text-blue-400 transition-colors">
                   💼 LinkedIn
                 </a>
-                <a href="https://github.com/mahirpatel" className="hover:text-blue-400 transition-colors">
+                <a href="https://github.com/EugeneBertrand" className="hover:text-blue-400 transition-colors">
                   🚀 GitHub
                 </a>
               </div>
