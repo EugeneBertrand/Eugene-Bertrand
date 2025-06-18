@@ -1,3 +1,5 @@
+import { Briefcase } from "lucide-react";
+
 const experiences = [
   {
     title: "Edge Computing Researcher",
@@ -44,9 +46,13 @@ const Experience = () => {
     <section id="experience" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-white bg-clip-text text-transparent">
-            Experience
-          </h2>
+          <div className="flex items-center justify-center mb-4">
+            <Briefcase className="h-6 w-6 text-emerald-400 mr-2" />
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              Experience
+            </h2>
+            <Briefcase className="h-6 w-6 text-emerald-400 ml-2" />
+          </div>
         </div>
 
         <div className="max-w-6xl mx-auto">
@@ -54,28 +60,41 @@ const Experience = () => {
             {experiences.map((experience, index) => (
               <div
                 key={index}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-500 hover:scale-105 group"
+                className="bg-gradient-to-br from-emerald-900/20 via-teal-900/20 to-cyan-900/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/30 hover:border-emerald-400/60 transition-all duration-500 hover:scale-105 group shadow-lg hover:shadow-emerald-500/20"
               >
-                <h3 className="text-xl font-semibold text-white mb-4">{experience.title}</h3>
-                <p className="text-blue-100 font-medium mb-2">{experience.company}</p>
-                <p className="text-blue-100 font-medium mb-4">{experience.dates}</p>
-                <p className="text-blue-100 font-medium mb-4">{experience.description}</p>
-                <h4 className="text-lg font-semibold text-white mb-2">Technologies:</h4>
-                <ul>
-                  {experience.technologies.map((technology, technologyIndex) => (
-                    <li key={technologyIndex} className="text-blue-100 font-medium mb-2">
-                      {technology}
-                    </li>
-                  ))}
-                </ul>
-                <h4 className="text-lg font-semibold text-white mb-2">Achievements:</h4>
-                <ul>
-                  {experience.achievements.map((achievement, achievementIndex) => (
-                    <li key={achievementIndex} className="text-blue-100 font-medium mb-2">
-                      {achievement}
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-xl font-semibold text-emerald-100 mb-4">{experience.title}</h3>
+                <p className="text-teal-200 font-medium mb-2">{experience.company}</p>
+                <p className="text-cyan-200 font-medium mb-4">{experience.dates}</p>
+                <p className="text-emerald-100 mb-4 leading-relaxed">{experience.description}</p>
+                
+                <div className="mb-4">
+                  <h4 className="text-lg font-semibold text-emerald-300 mb-2">Technologies:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {experience.technologies.map((technology, technologyIndex) => (
+                      <span
+                        key={technologyIndex}
+                        className="px-3 py-1 bg-emerald-800/40 text-emerald-200 rounded-full text-sm border border-emerald-500/40"
+                      >
+                        {technology}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-semibold text-emerald-300 mb-2">Key Achievements:</h4>
+                  <ul className="space-y-2">
+                    {experience.achievements.map((achievement, achievementIndex) => (
+                      <li
+                        key={achievementIndex}
+                        className="flex items-start text-teal-100"
+                      >
+                        <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
