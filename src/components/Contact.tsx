@@ -67,7 +67,7 @@ const Contact = () => {
               <div className="text-center">
                 <Button type="submit" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full hover:from-blue-500 hover:to-blue-400 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 hover:scale-105 flex items-center mx-auto">
                   <Star className="h-5 w-5 mr-2" />
-                  Launch Transmission
+                  Connect
                   <Star className="h-5 w-5 ml-2" />
                 </Button>
               </div>
